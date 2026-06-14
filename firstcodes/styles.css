@@ -485,6 +485,35 @@ section {
     background: white;
 }
 
+/* Ad styles for cards and site banner */
+.ad {
+    border: 1px dashed rgba(16, 185, 129, 0.25);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(90deg, rgba(16,185,129,0.04), rgba(14,165,233,0.02));
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.site-ad {
+    padding: 2rem 0;
+    background: transparent;
+}
+
+.site-ad-banner {
+    background: linear-gradient(90deg, #f8fafc 0%, #ecfeff 100%);
+    border: 1px solid rgba(14,165,233,0.08);
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(2,6,23,0.04);
+}
+
+.site-ad-banner a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
 .footer {
     padding: 4rem 0 2rem;
     background: var(--text-dark);
