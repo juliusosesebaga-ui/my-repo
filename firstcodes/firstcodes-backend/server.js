@@ -18,8 +18,8 @@ app.use(morgan('dev'));
 // Serve admin static UI
 app.use('/admin', express.static(path.join(__dirname, 'public', 'admin')));
 
-// Serve the landing page and front-end assets from the sibling firstcodes folder
-app.use(express.static(path.join(__dirname, '..', 'firstcodes')));
+// Serve the landing page and front-end assets from the parent `firstcodes` folder
+app.use(express.static(path.join(__dirname, '..')));
 
 // Simple token check middleware for admin endpoints
 function requireAdmin(req, res, next) {
@@ -105,7 +105,7 @@ app.get('/api/health', (req, res) => res.json({ ok: true }));
 
 // Fallback to frontend app for any non-API route
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'firstcodes', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
