@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin - Church Ibafo</title>
+  <style>
+    body{font-family:system-ui,Arial;margin:20px}
+    input,textarea{width:100%;padding:8px;margin:6px 0}
+    .row{display:flex;gap:12px}
+    .col{flex:1}
+    button{padding:8px 12px}
+    .card{border:1px solid #ddd;padding:12px;border-radius:8px;margin-bottom:12px}
+  </style>
+</head>
+<body>
+  <h1>Admin</h1>
+  <p>Enter the admin username and password to manage sermons and announcements.</p>
+
+  <section id="login-section" class="card">
+    <h2>Admin Login</h2>
+    <input id="admin-user" placeholder="Username">
+    <input id="admin-pass" type="password" placeholder="Password">
+    <button id="login-button">Log In</button>
+    <p id="login-error" style="color:red;display:none;"></p>
+  </section>
+
+  <section id="content-section" style="display:none;">
+    <h2>Create Sermon</h2>
+    <div class="card">
+      <input id="sermon-title" placeholder="Title">
+      <input id="sermon-slug" placeholder="Slug (optional)">
+      <input id="sermon-author" placeholder="Author">
+      <textarea id="sermon-body" rows="6" placeholder="Body"></textarea>
+      <input id="sermon-images" placeholder="Image URLs (comma separated)">
+      <input id="sermon-ad" placeholder="Ad text or image URL (optional)">
+      <button id="create-sermon">Create Sermon</button>
+    </div>
+    <div id="sermons-list"></div>
+
+    <h2>Create Announcement</h2>
+    <div class="card">
+      <input id="ann-title" placeholder="Title">
+      <textarea id="ann-content" rows="4" placeholder="Content"></textarea>
+      <input id="ann-address" placeholder="Meeting address (for Google Maps)">
+      <textarea id="ann-checklist" rows="3" placeholder="Checklist items (one per line)"></textarea>
+      <input id="ann-images" placeholder="Image URLs (comma separated)">
+      <input id="ann-ad" placeholder="Ad text or image URL (optional)">
+      <label><input type="checkbox" id="ann-active" checked> Active</label>
+      <button id="create-ann">Create Announcement</button>
+    </div>
+    <div id="anns-list"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
