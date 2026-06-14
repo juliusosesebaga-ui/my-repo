@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: church-ibafo-backend
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: cd firstcodes/firstcodes-backend && npm install
+    startCommand: cd firstcodes/firstcodes-backend && npm start
+    envVars:
+      - key: DB_FILE
+        value: firstcodes/firstcodes-backend/data/db.json
+      - key: ADMIN_USER
+        value: custodian
+      - key: ADMIN_PASS
+        value: custoelite123
+      - key: ADMIN_TOKEN
+        value: changeme

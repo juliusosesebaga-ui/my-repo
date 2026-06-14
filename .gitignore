@@ -1,0 +1,12 @@
+# Ignore node modules and runtime artifacts
+node_modules/
+firstcodes/firstcodes-backend/node_modules/
+# Backend local env and data
+firstcodes/firstcodes-backend/.env
+firstcodes/firstcodes-backend/data/
+# Archives and logs
+*.zip
+*.log
+# OS files
+desktop.ini
+Thumbs.db
