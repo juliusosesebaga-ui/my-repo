@@ -1,0 +1,5 @@
+node_modules/
+firstcodes-backend/node_modules/
+firstcodes-backend/.env
+firstcodes-backend/data/
+*.zip
